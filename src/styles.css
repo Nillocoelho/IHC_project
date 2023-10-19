@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primeira-color:blue;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p{
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .etiqueta-games {
+    background-color: #014ba0;
+    color: white;
+  }
+  
+  .etiqueta-hardware {
+    background-color: #009d71;
+    color: white;
+  }
+
+  .etiqueta-software {
+    background-color: #9d0d00;
+    color: white;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    gap: 1rem; /* Espaçamento entre as matérias */
+  }
+
+  .data{
+    color: gray;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  
+  
+  
+
+  
