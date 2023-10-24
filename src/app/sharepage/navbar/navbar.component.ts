@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  isModalVisible = false;
+
+  showModal() {
+    this.isModalVisible = true;
+  }
+  closeModal() {
+    this.isModalVisible = false;
+  }
 
 }
