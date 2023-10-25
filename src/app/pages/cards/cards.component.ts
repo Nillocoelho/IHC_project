@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cards',
@@ -50,7 +51,15 @@ export class CardsComponent {
         theme: 'Hardware',
         style: 'etiqueta-hardware'
     }
-    ];
-  
 
+    ];
+    alertInfo(){
+      Swal.fire({
+        icon: 'error',
+        title: 'Você não está logado',
+        text: 'Para ler a materia faça o login',
+        footer: '<a href="">Se o problema persistir, clique aqui.</a>'
+      })
+    }
+  
 }
