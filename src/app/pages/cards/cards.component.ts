@@ -57,8 +57,7 @@ export class CardsComponent {
       Swal.fire({
         icon: 'error',
         title: 'Você não está logado',
-        text: 'Para ler a materia faça o login',
-        footer: '<a href="">Se o problema persistir, clique aqui.</a>'
+        text: 'Para ler a materia faça o login'
       })
     }
   

@@ -14,5 +14,11 @@ export class NavbarComponent {
   closeModal() {
     this.isModalVisible = false;
   }
+  
+  showNotification = false;
+
+  toggleNotification() {
+    this.showNotification = !this.showNotification;
+  }
 
 }
