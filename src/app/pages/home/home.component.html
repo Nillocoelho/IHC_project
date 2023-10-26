@@ -1,58 +1,53 @@
-<div class="flex flex-col w-9/12 mx-auto mt-10 mb-52 md:grid md:grid-cols-3 gap-4">
-  <div class="flex flex-1 items-center relative overflow-hidden rounded-md md:row-span-2 md:col-span-2 md:inline-block">
-    <img src="assets/imagens/EA.webp" alt="EAFC" class="w-full h-full rounded-md shadow-md">
-    <div class="w-full m-auto bg-black bg-opacity-50 bottom-0 h-1/6 absolute">
-      <a class="font-bold max-w-[70%] absolute text-white left-4 text-3xl font-sans text-left" href="#">EA Sports FC vai ganhar um jogo tático para dispositivos mobile.</a>
-    </div>
-  </div>
-
-  <div class="flex flex-1 relative overflow-hidden rounded-md md:col-span-1 md:row-span-1 md:inline-block">
-    <img src="assets/imagens/RADEON.webp" alt="RADEON" class="w-full rounded-md shadow-md drop-shadow-md">
-
-    <div class="w-full m-auto bg-black bg-opacity-50 bottom-0 h-1/4 absolute">
-      <a class="font-bold text-white left-4 top-2 absolute font-sans text-2xl text-left w-full" href="#">Drivers para placas de vídeo AMD Software Adrenalin 23.10.1 WHQL é lançado</a>
-      <span class="absolute bottom-8 left-4"></span>
-    </div>
-  </div>
-
-  <div class="flex flex-1 items-center relative overflow-hidden rounded-md md:col-span-1 md:row-span-1 md:inline-block">
-    <img src="assets/imagens/GTA.webp" alt="GTA6" class="w-full rounded-md shadow-md">
-
-    <div class="w-full m-auto bg-black bg-opacity-50 h-1/4 bottom-0 absolute">
-      <a class="font-bold text-white left-4 top-2 absolute font-sans text-2xl text-left w-full" href="#">GTA 6 recebe classificação oficial na Austrália</a>
-      <span class="absolute bottom-8 left-4"></span>
-    </div>
+<div *ngIf="mostrarMensagem" class="fixed inset-0 flex items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg relative">
+    <h1 class="font-bold my-3">O que há de Novo:</h1>
+    <button (click)="fecharMensagem()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+      &times;
+    </button>
+    <p>&#10004; Foi Criado o Assine Já</p>
+    <p>&#10004; Responsividade criada</p>
+    <p>&#10004; Correção de bug</p>
+    <p>&#10004; Ajuste de cores</p>
+    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded float-right">
+      Leia mais
+    </button>
+    <button (click)="fecharMensagem()" class="mt-4 bg-gray-600 hover:bg-gray-400 text-white px-4 py-2 rounded float-right mr-3">
+      Fechar
+    </button>
   </div>
 </div>
+
+<!-- Conteúdo do seu componente Angular -->
+
 
 
 <app-cards></app-cards>
 
 
-```
 <nav aria-label="Page navigation example">
   <ul class="inline-flex -space-x-px text-base h-10 justify-center w-full m-auto">
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-4">...</a>
+      <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">...</a>
     </li>
     <li>
-      <a href="#" aria-current="page" class="flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white">1</a>
+      <a (click)="trocarPagina(1)" [class]="paginaAtual === 1 ? 'flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white' : 'flex items-center justify-center px-4 h-10 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400'">1</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">2</a>
+      <a (click)="trocarPagina(2)" [class]="paginaAtual === 2 ? 'flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white' : 'flex items-center justify-center px-4 h-10 text-gray-500 bg-white border border-gray-300 hover.bg-gray-100 hover.text-gray-700 dark.bg-gray-800 dark.border-gray-700 dark.text-black dark.hover.bg-gray-700 dark.hover.text-gray-400'">2</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">3</a>
+      <a (click)="trocarPagina(3)" [class]="paginaAtual === 3 ? 'flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white' : 'flex items-center justify-center px-4 h-10 text-gray-500 bg-white border border-gray-300 hover.bg-gray-100 hover.text-gray-700 dark.bg-gray-800 dark.border-gray-700 dark.text-black dark.hover.bg-gray-700 dark.hover.text-gray-400'">3</a>
     </li>
     <li>
-      <a href="#" class="hidden items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400 md:flex">4</a>
+      <a (click)="trocarPagina(4)" [class]="paginaAtual === 4 ? 'flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white' : 'flex items-center justify-center px-4 h-10 text-gray-500 bg-white border border-gray-300 hover.bg-gray-100 hover.text-gray-700 dark.bg-gray-800 dark.border-gray-700 dark.text-black dark.hover.bg-gray-700 dark.hover.text-gray-400'">4</a>
     </li>
     <li>
-      <a href="#" class="hidden items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400 md:flex">5</a>
+      <a (click)="trocarPagina(5)" [class]="paginaAtual === 5 ? 'flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white' : 'flex items-center justify-center px-4 h-10 text-gray-500 bg-white border border-gray-300 hover.bg-gray-100 hover.text-gray-700 dark.bg-gray-800 dark.border-gray-700 dark.text-black dark.hover.bg-gray-700 dark.hover.text-gray-400'">5</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">>></a>
+      <a (click)="trocarPagina(paginaAtual + 1)" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover.bg-gray-100 hover.text-gray-700 dark.bg-gray-800 dark.border-gray-700 dark.text-black dark.hover.bg-gray-700 dark.hover.text-gray-400">>></a>
     </li>
   </ul>
 </nav>
+
 

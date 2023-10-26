@@ -11,7 +11,7 @@
           <p class="font-bold text-xl text-center w-full">{{noticia.title}}</p>
           <p class="hidden md:block">{{noticia.content}}</p>        
         </div>
-        <div class="grid grid-cols-3 justify-between rounded-lg max-w-[40%] md:max-w-[90%] self-start md:flex md:flex-row">
+        <div class="flex flex-col justify-between rounded-lg max-w-[40%] md:max-w-[90%] self-start md:grid md:grid-cols-3">
           <div class="data p-2 m-4">{{noticia.data}}</div>
           <div class="etiqueta {{noticia.style}} p-2 m-4 w-24 text-center self-start">{{noticia.theme}}</div>
           <div class="etiqueta bg-blue-700 p-2 m-4 w-28 text-center text-white hover:bg-blue-950 hover:cursor-pointer"><button (click)="alertInfo()"> Ler Mais</button></div> 

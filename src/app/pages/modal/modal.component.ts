@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal',
@@ -41,6 +42,12 @@ export class ModalComponent {
       // Implemente a lógica para enviar os dados do formulário para o servidor ou outro destino aqui
     }
     this.close.emit();
+
+    Swal.fire({
+      icon:'success',
+      title: 'Assinatura feita com Sucesso!',
+      text: 'Obrigado por assinar nossa plataforma!'
+    })
   }
 
     
