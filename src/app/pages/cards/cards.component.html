@@ -1,22 +1,21 @@
 
-<app-modal *ngIf="isModalVisible" (close)="closeModal()"></app-modal>
-<div *ngFor="let noticia of noticias" class="grid grid-cols-5 gap-4 w-10/12 mt-10 mb-20">
+<div *ngFor="let noticia of noticias" class="flex flex-col mx-auto gap-4 w-10/12 mt-10 mb-20 justify-center md:grid md:grid-cols-5">
     <!-- Cada outra notícia -->
-    <div class="col-start-2 col-end-4 flex items-center mb-8 border shadow-lg rounded-md"> 
-      <div class="w-1/3 flex h-full">
+    <div class="md:flex items-center mb-8 border shadow-lg rounded-md md:col-start-2 md:col-end-5"> 
+    <!-- <div class="flex flex-col m-auto border shadow-lg rounded-md md:col-start-2 md:col-end-4">  -->
+      <div class="w-full h-full block md:w-1/3 md:flex">
         <img src={{noticia.img}} alt="DISCORD" class="w-full rounded-md shadow-md">
       </div>
-      <div class="w-2/3 pl-4 items-center  ml-10">
-        <div class="p-4 rounded-lg max-w-[75%]">
-          <p class="font-bold text-xl text-center mb-3">{{noticia.title}}</p>
-          <p>{{noticia.content}}</p>        
+      <div class="w-2/3 pl-4 items-center ml-10">
+        <div class="pt-4 rounded-lg w-full md:max-w-[75%] md:p-4">
+          <p class="font-bold text-xl text-center w-full">{{noticia.title}}</p>
+          <p class="hidden md:block">{{noticia.content}}</p>        
         </div>
-        <div class="flex justify-between rounded-lg max-w-[70%] self-start">
+        <div class="grid grid-cols-3 justify-between rounded-lg max-w-[40%] md:max-w-[90%] self-start md:flex md:flex-row">
           <div class="data p-2 m-4">{{noticia.data}}</div>
-          <div class="etiqueta bg-blue-700 p-2 m-4 w-36 text-center text-white hover:bg-blue-950 hover:cursor-pointer"><button (click)="alertInfo()"> Ler Mais >></button></div> 
+          <div class="etiqueta {{noticia.style}} p-2 m-4 w-24 text-center self-start">{{noticia.theme}}</div>
+          <div class="etiqueta bg-blue-700 p-2 m-4 w-28 text-center text-white hover:bg-blue-950 hover:cursor-pointer"><button (click)="alertInfo()"> Ler Mais</button></div> 
         </div>
       </div>
-      <div class="etiqueta {{noticia.style}} p-2 m-4 w-24 text-center self-start">{{noticia.theme}}</div>
     </div>
-    
-    
+</div>

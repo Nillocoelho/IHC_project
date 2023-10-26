@@ -1,41 +1,39 @@
-
-<div class="grid grid-cols-2 w-9/12 mx-auto mt-10 mb-52 lg:w-9/12 sm:w-full ">
-  <div class="row-span-2 col-span-2 items-center inline-block relative overflow-hidden rounded-md">
+<div class="flex flex-col w-9/12 mx-auto mt-10 mb-52 md:grid md:grid-cols-3 gap-4">
+  <div class="flex flex-1 items-center relative overflow-hidden rounded-md md:row-span-2 md:col-span-2 md:inline-block">
     <img src="assets/imagens/EA.webp" alt="EAFC" class="w-full h-full rounded-md shadow-md">
-   <div class="w-full m-auto bg-black bg-opacity-50 bottom-0 h-1/6 absolute">
-    <a class="font-bold max-w-[70%] absolute text-white left-4 text-3xl font-sans text-left" href="#">EA Sports FC vai ganhar um jogo tático para dispositivos mobile.</a>
+    <div class="w-full m-auto bg-black bg-opacity-50 bottom-0 h-1/6 absolute">
+      <a class="font-bold max-w-[70%] absolute text-white left-4 text-3xl font-sans text-left" href="#">EA Sports FC vai ganhar um jogo tático para dispositivos mobile.</a>
+    </div>
   </div>
-  </div>
-  
-  <div class="col-span-1 row-span-1 inline-block relative overflow-hidden rounded-md">
+
+  <div class="flex flex-1 relative overflow-hidden rounded-md md:col-span-1 md:row-span-1 md:inline-block">
     <img src="assets/imagens/RADEON.webp" alt="RADEON" class="w-full rounded-md shadow-md drop-shadow-md">
 
     <div class="w-full m-auto bg-black bg-opacity-50 bottom-0 h-1/4 absolute">
       <a class="font-bold text-white left-4 top-2 absolute font-sans text-2xl text-left w-full" href="#">Drivers para placas de vídeo AMD Software Adrenalin 23.10.1 WHQL é lançado</a>
-      <span  class=" absolut bottom-8 left-4">    </span>
+      <span class="absolute bottom-8 left-4"></span>
     </div>
   </div>
-  
 
-  <div class="col-span-1 row-span-1 items-center inline-block relative overflow-hidden rounded-md">
-    <img src="assets/imagens/GTA.webp" alt="GTA6" class="w-full rounded-md shadow-md ">
-    
+  <div class="flex flex-1 items-center relative overflow-hidden rounded-md md:col-span-1 md:row-span-1 md:inline-block">
+    <img src="assets/imagens/GTA.webp" alt="GTA6" class="w-full rounded-md shadow-md">
+
     <div class="w-full m-auto bg-black bg-opacity-50 h-1/4 bottom-0 absolute">
       <a class="font-bold text-white left-4 top-2 absolute font-sans text-2xl text-left w-full" href="#">GTA 6 recebe classificação oficial na Austrália</a>
-      <span  class=" absolut bottom-8 left-4">    </span>
+      <span class="absolute bottom-8 left-4"></span>
     </div>
-    
   </div>
 </div>
+
 
 <app-cards></app-cards>
 
 
 ```
 <nav aria-label="Page navigation example">
-  <ul class="inline-flex -space-x-px text-base h-10 justify-center w-full">
+  <ul class="inline-flex -space-x-px text-base h-10 justify-center w-full m-auto">
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-4">Previous</a>
+      <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-4">...</a>
     </li>
     <li>
       <a href="#" aria-current="page" class="flex items-center justify-center px-4 h-10 text-blue-700 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-600 dark:border-gray-700 dark:bg-blue-700 dark:text-white">1</a>
@@ -47,14 +45,14 @@
       <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">3</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">4</a>
+      <a href="#" class="hidden items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400 md:flex">4</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">5</a>
+      <a href="#" class="hidden items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400 md:flex">5</a>
     </li>
     <li>
-      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">Next</a>
+      <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-black dark:hover:bg-gray-700 dark:hover:text-gray-400">>></a>
     </li>
   </ul>
 </nav>
-```
+
